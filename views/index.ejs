@@ -4,7 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini message board</title>
-    <link rel="stylesheet" href="/index.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        background-color: #007acc;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        margin: 0;
+      }
+
+      div {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 600px;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        color: #333;
+      }
+
+      p {
+        margin: 5px 0;
+        color: #555;
+      }
+
+      p:last-child {
+        font-size: 0.9em;
+        color: #888;
+      }
+      .add {
+        font-size: 3rem;
+        font-weight: 400;
+        text-decoration: wavy;
+        color: #f4f6f8;
+        background-color: #007acc;
+        padding: 1rem 1.8rem;
+        border-radius: 40rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+      }
+      .msg-link {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .msg-link:hover .msg {
+        background-color: #f0f0f0;
+        transition: 0.2s;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <h1>MINI Message board</h1>
