@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini message board</title>
+    <link rel="stylesheet" href="src/index.css">
   </head>
   <body>
-    <h1>Message</h1>
+    <h1>MINI Message board</h1>
     <% msg.forEach((i)=>{%>
-    <div><%= i.text %></div>
+    <div>
+      <h3><%= i.text %></h3>
+      <p><strong>Posted by:</strong> <%= i.user %></p>
+      <p><%= i.added.toISOString().split("T")[0] %></p>
+    </div>
     <%});%>
+    <a href="/new">+</a>
   </body>
 </html>
