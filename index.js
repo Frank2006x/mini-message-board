@@ -3,7 +3,10 @@ const app = express();
 const path = require("path");
 const defaultRouter = require("./routes/default");
 const newRouter = require("./routes/new");
-const msgRouter=require("./routes/msg")
+const msgRouter = require("./routes/msg");
+
+require("dotenv").config();
+const PORT = process.env.PORT;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -12,8 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", defaultRouter);
 app.use("/new", newRouter);
-app.use("/msg/",msgRouter);
+app.use("/msg/", msgRouter);
 
-app.listen(3000, () => {
-  console.log("Server UP");
-});
+// app.listen(PORT, () => {
+//   console.log("Server UP");
+//   console.log(PORT);
+// });
+
+module.exports = app;
