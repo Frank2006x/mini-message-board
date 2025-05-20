@@ -12,10 +12,6 @@
       "dest": "/public/$1.css"
     },
     {
-      "src": "/src/(.*)",
-      "dest": "/public/src/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "index.js"
     }
