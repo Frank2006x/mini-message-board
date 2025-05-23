@@ -79,7 +79,7 @@
       <div class="msg">
         <h3><%= i.msg %></h3>
         <p><strong>Posted by:</strong> <%= i.user %></p>
-        <p><%= i.dateofpost %></p>
+        <p><%= i.dateofpost.toString().slice(0,10) %></p>
       </div>
     </a>
     <% }); %>

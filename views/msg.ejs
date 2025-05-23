@@ -54,7 +54,7 @@
     <div class="message-container">
       <h3><%= msg.msg %></h3>
       <p><strong>User:</strong> <%= msg.user %></p>
-      <p><strong>Date:</strong> <%= msg.dateofpost %></p>
+      <p><strong>Date:</strong> <%= msg.dateofpost.toString().slice(0,10) %></p>
     </div>
     <a href="/">Back to Home</a>
   </body>

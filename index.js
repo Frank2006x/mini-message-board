@@ -17,9 +17,9 @@ app.use("/", defaultRouter);
 app.use("/new", newRouter);
 app.use("/msg", msgRouter);
 
-// app.listen(PORT, () => {
+// app.listen(3100, () => {
 //   console.log("Server UP");
-//   console.log(PORT);
+//   console.log(3100);
 // });
 
 module.exports = app;
