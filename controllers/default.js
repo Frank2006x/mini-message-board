@@ -1,7 +1,8 @@
-const messages=require('../messages')
 
+const db=require("../db/queries")
 module.exports = {
-  get: (req, res) => {
+  get: async (req, res) => {
+    const messages=await db.getAllMsg();
     res.render("index", { msg: messages });
   },
 };

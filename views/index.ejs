@@ -75,11 +75,11 @@
   <body>
     <h1>MINI Message board</h1>
     <% msg.forEach((i, index) => { %>
-    <a href="/msg/<%= index %>" class="msg-link">
+    <a href="/msg/<%= i.user %>" class="msg-link">
       <div class="msg">
-        <h3><%= i.text %></h3>
+        <h3><%= i.msg %></h3>
         <p><strong>Posted by:</strong> <%= i.user %></p>
-        <p><%= i.added.toISOString().split("T")[0] %></p>
+        <p><%= i.dateofpost %></p>
       </div>
     </a>
     <% }); %>

@@ -52,9 +52,9 @@
   <body>
     <h1>Message Details</h1>
     <div class="message-container">
-      <h3><%= msg.text %></h3>
+      <h3><%= msg.msg %></h3>
       <p><strong>User:</strong> <%= msg.user %></p>
-      <p><strong>Date:</strong> <%= msg.added.toISOString().split("T")[0] %></p>
+      <p><strong>Date:</strong> <%= msg.dateofpost %></p>
     </div>
     <a href="/">Back to Home</a>
   </body>

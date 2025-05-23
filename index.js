@@ -15,11 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", defaultRouter);
 app.use("/new", newRouter);
-app.use("/msg/", msgRouter);
+app.use("/msg", msgRouter);
 
-// app.listen(PORT, () => {
-//   console.log("Server UP");
-//   console.log(PORT);
-// });
+app.listen(PORT, () => {
+  console.log("Server UP");
+  console.log(PORT);
+});
 
-module.exports = app;
+// module.exports = app;
