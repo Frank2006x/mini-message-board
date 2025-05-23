@@ -1,29 +1,26 @@
 const { Client } = require("pg");
-
+require("dotenv").config();
 const SQL = `
 create table if not exists msg_table(
-    user varchar(255),
+    "user" varchar(255),
     msg TEXT,
-    dateOfPost date
+    datofpost date
     );
 
 
 `;
 
 async function main() {
-  console.log("seeding...");
   const client = new Client({
-    host: process.env.HOST,
-    user: process.env.USER,
-    database: process.env.DATABASE,
-    password: process.env.PASSWORD,
-    port: process.env.PGPORT,
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   });
 
   await client.connect();
   await client.query(SQL);
   await client.end();
-  console.log("done");
 }
 
 main();
